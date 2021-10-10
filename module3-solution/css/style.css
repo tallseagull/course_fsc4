@@ -67,7 +67,7 @@ h2 {
     font-size: 1.5em;
 }
 .main-section-text {
-    height: 1000px;
+    min-height: 1000px;
     padding: 10px;
     margin: 15px;
     background-color: #f9ee98;
