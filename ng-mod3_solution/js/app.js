@@ -55,7 +55,7 @@ function MenuSearchService($http) {
 
       console.log("Searching for " + searchTerm);
       for (let i=0; i < menuItems.length ; i++) {
-        if (menuItems[i].name.toLowerCase().includes(searchTerm.toLowerCase())) {
+        if (menuItems[i].description.toLowerCase().includes(searchTerm.toLowerCase())) {
           foundItems.push(menuItems[i]);
         }
       }
