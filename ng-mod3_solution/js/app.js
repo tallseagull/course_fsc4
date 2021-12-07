@@ -53,10 +53,11 @@ function MenuSearchService($http) {
       var foundItems = [];
       var menuItems = result.data.menu_items;
 
-      console.log("Searching for " + searchTerm);
-      for (let i=0; i < menuItems.length ; i++) {
-        if (menuItems[i].description.toLowerCase().includes(searchTerm.toLowerCase())) {
-          foundItems.push(menuItems[i]);
+      if (searchTerm.length > 0) {
+        for (let i = 0; i < menuItems.length; i++) {
+          if (menuItems[i].description.toLowerCase().includes(searchTerm.toLowerCase())) {
+            foundItems.push(menuItems[i]);
+          }
         }
       }
       // return processed items
